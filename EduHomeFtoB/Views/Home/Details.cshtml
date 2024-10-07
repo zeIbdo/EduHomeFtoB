@@ -1,0 +1,28 @@
+﻿@model Course
+
+<div class="courses-details-area blog-area pt-150 pb-140">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="courses-details">
+                    <div class="courses-details-img">
+                        <img src="~/img/@Model.ImageUrl" alt="courses-details">
+                    </div>
+                    <div class="course-details-content">
+                        <h2>@Model.Name</h2>
+                        <p>@Model.Description</p>
+                        <div class="course-details-right">
+                            <h3>COURSE FEATURES</h3>
+                            <ul>
+                                <li>starts <span>@Model.StartDate.ToString()</span></li>
+                                <li>duration <span>@Model.Duration</span></li>
+                                <li>Category <span>@Model.Category.Name</span></li>
+                            </ul>
+                            <h3 class="red">course fee $@Model.Fee</h3>
+                        </div>
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>

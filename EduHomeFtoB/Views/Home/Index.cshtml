@@ -1,1 +1,28 @@
-﻿
+﻿@model List<Course>
+
+<div class="course-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-course mb-70">
+                        <div class="course-img">
+                            <a href="course-details.html">
+                                <img src="~/img/@item.ImageUrl" alt="course">
+                                <div class="course-hover">
+                                    <i class="fa fa-link"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="course-content">
+                            <h3><a href="course-details.html">@item.Name</a></h3>
+                            <p>@item.Description</p>
+                            <a class="default-btn" asp-controller="home" asp-route-id="@item.Id" asp-action="details" >read more</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+</div>
+</div>

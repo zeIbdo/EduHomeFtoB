@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace EduHomeFtoB.Models;
+namespace EduHomeFtoB.Models.CourseViewModels;
 
-public class CourseCreateViewModel
+public class CourseUpdateViewModel
 {
+    public int Id { get; set; }
     public string Name { get; set; } = null!;
 
     public string Description { get; set; } = null!;
@@ -12,6 +13,6 @@ public class CourseCreateViewModel
     public decimal Fee { get; set; }
     public DateTime StartDate { get; set; }
 
-    public IFormFile CourseImage { get; set; }
+    public IFormFile? CourseImage { get; set; }
     public int CategoryId { get; set; }
 }
